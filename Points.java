@@ -8,14 +8,17 @@
 
 class Points {
     public static void main(String[] args) {
-        // StringBuilder str = new StringBuilder("Добрый день Как дела Все хорошо");
         String str = "Добрый день Как дела Все хорошо";
+        points(str);
+    }
+
+    public static void points(String str) {
         str = str.replaceAll("\\s{1,}([А-ЯЁ])", ". $1");
         char point = '.';
         if (str.charAt(str.length() - 1) != point) {
             str += point;
         }
         System.out.println(str);
-
     }
+
 }
